@@ -11,8 +11,8 @@ from telegram.ext import (
 with open("settings.json", "r", encoding="utf-8") as f:
     S = json.load(f)
 
-TOKEN = S["TELEGRAM_TOKEN"]
-ADMIN_ID = S["ADMIN_ID"]
+TOKEN = os.getenv("BOT_TOKEN")
+ADMIN_ID = os.getenv("ADMIN_ID")
 TZ = ZoneInfo("Europe/Rome")
 
 # Autopost
